@@ -14,8 +14,8 @@ jobs:
           root_file: |
             cv.tex
             coverletter.tex
-          extra_fonts:
-            fonts/*.ttf
+        env:
+          TEXINPUTS: ".:./Awesome-CV//:"
       - name: Upload PDF file
         uses: actions/upload-artifact@v4
         with:
