@@ -1,0 +1,133 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for Cover Letter
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Authors:
+% Claud D. Park <posquit0.bj@gmail.com>
+% Lars Richter <mail@ayeks.de>
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1in, top=.8cm, right=1in, bottom=1.8cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-darknight}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{CA63A8}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{false}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+% \photo[circle,noedge,left]{profile}
+\name{Joseph R.}{Capriotti}
+\position{Postdoctoral Research Fellow}
+\address{2842 Broadway W, Vancouver, BC V6K 2G7, Canada}
+
+\mobile{(+1) 815-370-3693}
+\email{josephrcapriotti@gmail.com}
+% \homepage{www.posquit0.com}
+\github{jcapriot}
+\linkedin{jcapriot}
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \twitter{@twit}
+% \skype{skype-id}
+% \reddit{reddit-id}
+% \extrainfo{extra informations}
+
+% \quote{``Be the change that you want to see in the world. Now!"}
+
+\renewcommand*{\headerlastnamestyle}[1]{{\fontsize{32pt}{1em}\headerfont\bfseries\color{text} #1}}
+\renewcommand*{\headerfirstnamestyle}[1]{{\fontsize{32pt}{1em}\headerfont\bfseries\color{text} #1}}
+
+%-------------------------------------------------------------------------------
+%	LETTER INFORMATION
+%	All of the below lines must be filled out
+%-------------------------------------------------------------------------------
+% The company being applied to
+\recipient
+  {Dr. Yaoguo Li}
+  {Colorado School of Mines\\1500 Illinois Street\\Golden, CO 80401}
+% The date on the letter, default is the date of compilation
+\letterdate{January 15, 2022}
+% The title of the letter
+%\lettertitle{Application for a faculty position in Mineral and Metal Resources}
+% How the letter is opened
+\letteropening{To Dr. Li,}
+% How the letter is closed
+\letterclosing{Sincerely,}
+% Any enclosures with the letter
+%\letterenclosure[Attached]{Curriculum Vitae}
+
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader[R]
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvfooter
+  {May 1, 2023}
+  {Joseph Capriotti~~~·~~~Cover Letter}
+  {}
+
+% Print the title with above letter informations
+\makelettertitle
+
+%-------------------------------------------------------------------------------
+%	LETTER CONTENT
+%-------------------------------------------------------------------------------
+\begin{cvletter}
+
+\lettersection{About Me}
+My name is Joseph Capriotti and I'm a postdoctoral fellow at the University of British Columbia, where my primary role is to serve as the director of operations of the SimPEG open-source software development. SimPEG focuses on simulation and parameter estimation in geophysics. My role involves coordinating a wide array of users and contributors including students, fellow academics, and industry professionals. I work to advise and assist on many different topics at the forefront of geophysical development, including processing of large distributed electromagnetic data acquisitions, and jointly inverting multi-physics data sets to improve characterization of underground targets. I also use this role to further develop open source teaching resources that make use of these tools to teach fundamental resource exploration techniques.
+
+My thesis research, which was targeted to oil and gas production using time-lapse gravity also extends to other geophysical monitoring methods including electromagnetics. My current research is at the forefront of geophysical inverse theory where I have experience with multiple joint inversion techniques including clustering and structural based methods. My commitment to open source development immediately broadens the impact of new developments. As we look forward in the geophysics, software development will play an important roll in research opportunities. Geophysicists can be expected to make use of open source software for data science, and as an active director of operations for open source geophysics software, I am able to advise others on recent best coding practices. This role has also prepared me to assist and advise peers on their own research projects.
+
+Mines was a very formative part of my experiences in both undergraduate and graduate school and I would welcome the opportunity to return. The geophysics program has a rich history of teachers and researchers that have left lasting impacts on the industry. As one of the only schools in the world with a dedicated geophysics department, they are able to elevate all aspects of geophysics on an institutional level, allowing collaboration with other scientists who would never otherwise be exposed to geophysics. Overall, I agree with the emphasis of the geophysics program at Mines, where they mix together computational geophysics and field practices. I believe my experiences in time-lapse gravity data acquisition, that I previously obtained at Mines, in active geothermal production fields will be an asset to this position, as I will be able to develop any new techniques in the context of real-world data collection logistics.
+
+I thank you for your time and consideration.
+
+\end{cvletter}
+%-------------------------------------------------------------------------------
+% Print the signature and enclosures with above letter informations
+\makeletterclosing
+
+\end{document}
