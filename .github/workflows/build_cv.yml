@@ -3,34 +3,34 @@ name: Build CV
 on: [push]
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout
-              uses: actions/checkout@v4
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
 
-            - name: Set up Python
-              uses: actions/setup-python@v5
-              with:
-                  python-version: "3.x"
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
 
-            - name: Install pyyaml
-              run: pip install pyyaml
+      - name: Install pyyaml
+        run: pip install pyyaml
 
-            - name: Generate publications
-              run: python scripts/generate_publications.py
+      - name: Generate publications
+        run: python scripts/generate_publications.py
 
-            - name: Install Typst
-              run: |
-                  TYPST_VERSION=$(curl -s https://api.github.com/repos/typst/typst/releases/latest | grep '"tag_name"' | cut -d'"' -f4)
-                  curl -sSL "https://github.com/typst/typst/releases/download/${TYPST_VERSION}/typst-x86_64-unknown-linux-musl.tar.xz" \
-                    | tar -xJ --strip-components=1 -C /usr/local/bin typst-x86_64-unknown-linux-musl/typst
+      - name: Install Typst
+        run: |
+          TYPST_VERSION=$(curl -s https://api.github.com/repos/typst/typst/releases/latest | grep '"tag_name"' | cut -d'"' -f4)
+          curl -sSL "https://github.com/typst/typst/releases/download/${TYPST_VERSION}/typst-x86_64-unknown-linux-musl.tar.xz" \
+            | tar -xJ --strip-components=1 -C /usr/local/bin typst-x86_64-unknown-linux-musl/typst
 
-            - name: Compile CV
-              run: typst compile CV/cv.typ CV/cv.pdf
+      - name: Compile CV
+        run: typst compile CV/cv.typ CV/cv.pdf --font-paths CV/fonts
 
-            - name: Upload PDF artifact
-              uses: actions/upload-artifact@v4
-              with:
-                  name: CV
-                  path: CV/cv.pdf
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: CV
+          path: CV/cv.pdf
