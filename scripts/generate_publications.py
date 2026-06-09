@@ -1,0 +1,199 @@
+#!/usr/bin/env python3
+"""
+Generate CV/publications.typ and src/publications.md from data/publications.yaml.
+Run this script before building the CV or the website.
+"""
+import re
+import textwrap
+from pathlib import Path
+
+import yaml
+
+ROOT = Path(__file__).parent.parent
+DATA_FILE = ROOT / "data" / "publications.yaml"
+TYPST_OUT = ROOT / "CV" / "publications.typ"
+MD_OUT = ROOT / "src" / "publications.md"
+
+
+def md_bold_to_typst(text: str) -> str:
+    """Convert Markdown **bold** to Typst *bold*."""
+    return re.sub(r"\*\*(.+?)\*\*", r"*[\1]*", text)
+
+
+def md_italic_to_typst(text: str) -> str:
+    """Convert Markdown _italic_ to Typst _italic_ (already same syntax)."""
+    return text
+
+
+def format_peer_reviewed_md(entry: dict) -> str:
+    authors = entry["authors"]
+    year = entry["year"]
+    title = entry["title"]
+    journal = entry["journal"]
+    volume = entry.get("volume", "")
+    pages = entry.get("pages", "")
+    note = entry.get("note", "")
+
+    vol_pages = ""
+    if volume and pages:
+        vol_pages = f", {volume}, {pages}"
+    elif volume:
+        vol_pages = f", {volume}"
+    elif pages:
+        vol_pages = f", {pages}"
+
+    line = f"{authors}, {year}, {title}. _{journal}_{vol_pages}."
+    if note:
+        line += f" — *{note}*"
+    return line
+
+
+def format_peer_reviewed_typst(entry: dict) -> str:
+    authors = md_bold_to_typst(entry["authors"])
+    year = entry["year"]
+    title = entry["title"]
+    journal = entry["journal"]
+    volume = entry.get("volume", "")
+    pages = entry.get("pages", "")
+    note = entry.get("note", "")
+
+    vol_pages = ""
+    if volume and pages:
+        vol_pages = f", {volume}, {pages}"
+    elif volume:
+        vol_pages = f", {volume}"
+    elif pages:
+        vol_pages = f", {pages}"
+
+    line = f"{authors}, {year}, {title}. _{journal}_{vol_pages}."
+    if note:
+        line += f" — _{note}_"
+    return line
+
+
+def format_conference_md(entry: dict) -> str:
+    authors = entry["authors"]
+    year = entry["year"]
+    title = entry["title"]
+    venue = entry.get("venue", "")
+    pages = entry.get("pages", "")
+    note = entry.get("note", "")
+
+    line = f"{authors}, {year}, {title}. _{venue}_"
+    if pages:
+        line += f", pp. {pages}"
+    line += "."
+    if note:
+        line += f" {note}"
+    return line
+
+
+def format_conference_typst(entry: dict) -> str:
+    authors = md_bold_to_typst(entry["authors"])
+    year = entry["year"]
+    title = entry["title"]
+    venue = entry.get("venue", "")
+    pages = entry.get("pages", "")
+    note = entry.get("note", "")
+
+    line = f"{authors}, {year}, {title}. _{venue}_"
+    if pages:
+        line += f", pp. {pages}"
+    line += "."
+    if note:
+        line += f" {note}"
+    return line
+
+
+def format_in_prep_md(entry: dict) -> str:
+    authors = entry["authors"]
+    title = entry["title"]
+    return f"{authors}, {title}. _(In preparation)_"
+
+
+def format_in_prep_typst(entry: dict) -> str:
+    authors = md_bold_to_typst(entry["authors"])
+    title = entry["title"]
+    return f"{authors}, {title}. _In preparation_"
+
+
+def generate_typst(data: dict) -> str:
+    lines = []
+
+    lines.append("== Peer Reviewed")
+    lines.append("")
+    for entry in data.get("peer_reviewed", []):
+        lines.append(format_peer_reviewed_typst(entry))
+        lines.append("")
+
+    if data.get("in_preparation"):
+        lines.append("== In Preparation")
+        lines.append("")
+        for entry in data["in_preparation"]:
+            lines.append(format_in_prep_typst(entry))
+            lines.append("")
+
+    lines.append("== Selected Conference Papers & Expanded Abstracts")
+    lines.append("")
+    for entry in data.get("conference", []):
+        lines.append(format_conference_typst(entry))
+        lines.append("")
+
+    return "\n".join(lines)
+
+
+def generate_md(data: dict) -> str:
+    lines = []
+    lines.append("# Publications")
+    lines.append("")
+
+    lines.append("## Peer Reviewed")
+    lines.append("")
+    for entry in data.get("peer_reviewed", []):
+        lines.append(f"- {format_peer_reviewed_md(entry)}")
+    lines.append("")
+
+    if data.get("in_preparation"):
+        lines.append("## In Preparation")
+        lines.append("")
+        for entry in data["in_preparation"]:
+            lines.append(f"- {format_in_prep_md(entry)}")
+        lines.append("")
+
+    lines.append("## Conference Papers & Expanded Abstracts")
+    lines.append("")
+    for entry in data.get("conference", []):
+        lines.append(f"- {format_conference_md(entry)}")
+    lines.append("")
+
+    if data.get("invited_presentations"):
+        lines.append("## Invited Presentations")
+        lines.append("")
+        for entry in data["invited_presentations"]:
+            title = entry["title"]
+            event = entry.get("event", "")
+            institution = entry.get("institution", "")
+            location = entry.get("location", "")
+            year = entry["year"]
+            where = ", ".join(filter(None, [institution, location]))
+            lines.append(f"- *{event}* — {title}. {where}, {year}.")
+        lines.append("")
+
+    return "\n".join(lines)
+
+
+def main():
+    with open(DATA_FILE, encoding="utf-8") as f:
+        data = yaml.safe_load(f)
+
+    typst_content = generate_typst(data)
+    TYPST_OUT.write_text(typst_content, encoding="utf-8")
+    print(f"Written: {TYPST_OUT}")
+
+    md_content = generate_md(data)
+    MD_OUT.write_text(md_content, encoding="utf-8")
+    print(f"Written: {MD_OUT}")
+
+
+if __name__ == "__main__":
+    main()

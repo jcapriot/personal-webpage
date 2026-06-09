@@ -1,8 +1,8 @@
-name: Deploy mkdocs site to Pages
+name: Deploy site to Pages
 
 on:
     push:
-        branches: [ $default-branch ]
+        branches: [main]
 
     workflow_dispatch:
 
@@ -19,34 +19,48 @@ jobs:
     build:
         runs-on: ubuntu-latest
         steps:
-            - name: Set up Git repository
+            - name: Checkout
               uses: actions/checkout@v4
 
-            - uses: actions/setup-python@v5
+            - name: Set up Python
+              uses: actions/setup-python@v5
               with:
-                  python-version: 3.x
+                  python-version: "3.x"
+
             - name: Setup Pages
               uses: actions/configure-pages@v5
               id: pages
 
-            - name: Set the cache id.
-              run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
-
-            - uses: actions/cache@v4
-              name: Store/Restore daily cache
+            - name: Cache pip dependencies
+              uses: actions/cache@v4
               with:
-                  key: mkdocs-material-${{ env.cache_id }}
-                  path: ~/.cache
+                  key: mkdocs-material-${{ hashFiles('**/requirements*.txt') }}-${{ github.run_id }}
+                  path: ~/.cache/pip
                   restore-keys: |
                       mkdocs-material-
 
-            - name: Install mkdocs material
-              run: pip install mkdocs-material
+            - name: Install Python dependencies
+              run: pip install mkdocs-material pyyaml
 
-            - name: Build html
+            - name: Generate publications
+              run: python scripts/generate_publications.py
+
+            - name: Build HTML
               run: mkdocs build --site-dir site
 
-            - name: No jekyll
+            - name: Install Typst
+              run: |
+                  TYPST_VERSION=$(curl -s https://api.github.com/repos/typst/typst/releases/latest | grep '"tag_name"' | cut -d'"' -f4)
+                  curl -sSL "https://github.com/typst/typst/releases/download/${TYPST_VERSION}/typst-x86_64-unknown-linux-musl.tar.xz" \
+                    | tar -xJ --strip-components=1 -C /usr/local/bin typst-x86_64-unknown-linux-musl/typst
+
+            - name: Compile CV
+              run: typst compile CV/cv.typ CV/cv.pdf
+
+            - name: Copy CV to site
+              run: cp CV/cv.pdf site/cv.pdf
+
+            - name: Add .nojekyll
               run: touch site/.nojekyll
 
             - name: Upload artifact
@@ -54,7 +68,6 @@ jobs:
               with:
                   path: ./site
 
-    # Deployment job
     deploy:
         environment:
             name: github-pages

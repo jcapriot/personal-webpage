@@ -1,11 +1,27 @@
 site_name: Joseph Capriotti
 site_url: https://jcapriot.xyz
 repo_url: https://github.com/jcapriot/personal-webpage/
+repo_name: jcapriot/personal-webpage
 
 docs_dir: src
 
 theme:
   name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: cyan
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: cyan
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
   features:
     - navigation.instant
     - navigation.instant.prefetch
@@ -14,7 +30,25 @@ theme:
     - navigation.path
     - navigation.indexes
     - navigation.top
+    - navigation.footer
     - toc.follow
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+  icon:
+    repo: fontawesome/brands/github
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/jcapriot
+      name: GitHub
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/jcapriot
+      name: LinkedIn
+    - icon: fontawesome/regular/envelope
+      link: mailto:josephrcapriotti@gmail.com
+      name: Email
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -29,8 +63,15 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.tilde
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - md_in_html
   - tables
   - def_list
+  - attr_list
+  - admonition
+  - pymdownx.details
   - pymdownx.tasklist:
       custom_checkbox: true
   - toc:
@@ -40,9 +81,13 @@ extra_javascript:
   - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
+extra_css:
+  - stylesheets/extra.css
+
 # Page tree
 nav:
   - Home: index.md
-  - Repositories: repositories.md
-  - Citations: citations.md
   - Experience: experience.md
+  - Software: software.md
+  - Teaching: teaching.md
+  - Publications: publications.md

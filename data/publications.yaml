@@ -1,0 +1,177 @@
+peer_reviewed:
+  - authors: "Um, E., D. Alumbaugh, **J. Capriotti**, J. Weis, E. Nichols, and K. Osato"
+    year: 2024
+    title: "3D modeling of deep borehole electromagnetic measurements with energized casing source for fracture mapping at the Utah FORGE geothermal site"
+    journal: "Geophysical Prospecting"
+    volume: 72
+    pages: "2779–2797"
+    doi: ""
+    note: ""
+
+  - authors: "Heagy, L.J., S. Kang, **J. Capriotti**, D. Cowan, D. Fournier, and D.W. Oldenburg"
+    year: 2024
+    title: "Opportunities for open-source software to accelerate research in applied geophysics"
+    journal: "The Leading Edge"
+    volume: "43(2)"
+    pages: "91–99"
+    doi: ""
+    note: ""
+
+  - authors: "**Capriotti, J.**, and Y. Li"
+    year: 2022
+    title: "Joint inversion of gravity and gravity gradient data: A systematic evaluation"
+    journal: "Geophysics"
+    volume: "87(2)"
+    pages: "G29–G44"
+    doi: ""
+    note: ""
+
+  - authors: "Li, Y., R. Krahenbuhl, and **J. Capriotti**"
+    year: 2019
+    title: "Time-lapse gravity: A versatile method for monitoring dynamic processes"
+    journal: "Acta Geologica Sinica (English Edition)"
+    volume: "93(S1)"
+    pages: "36–37"
+    doi: ""
+    note: ""
+
+  - authors: "**Capriotti, J.**, and Y. Li"
+    year: 2015
+    title: "Inversion for permeability distribution from time-lapse gravity data"
+    journal: "Geophysics"
+    volume: 80
+    pages: "WA69–WA83"
+    doi: ""
+    note: "Honorable Mention, Best Paper in Geophysics, 2015"
+
+in_preparation:
+  - authors: "**Capriotti, J.**, and Y. Li"
+    title: "Fluid-flow coupled time-lapse gravity inversion for permeability and porosity distributions"
+
+  - authors: "**Capriotti, J.**, and Y. Li"
+    title: "Clustering inversion of electrical potential due to an arbitrarily anisotropic layered half-space"
+
+conference:
+  - authors: "**Capriotti, J.**, N. Perkovich, M. Zhang, and Y. Li"
+    year: 2025
+    title: "Geophysical responses of stimulated hydrogen production in ultramafic rocks"
+    venue: "SEG International Exposition and Annual Meeting"
+    note: "SEG-2025-4316820"
+
+  - authors: "Soler, S., **J. Capriotti**, D. Oldenburg, and L. Heagy"
+    year: 2025
+    title: "3D geophysical inversions to characterize carbon sequestration potential of ultramafic rocks"
+    venue: "EGU General Assembly"
+    note: "EGU25-13551"
+
+  - authors: "**Capriotti, J.**, L.J. Heagy, and S.R. Soler"
+    year: 2023
+    title: "Joint inversions with the SimPEG framework"
+    venue: "AGU Fall Meeting 2023"
+    note: ""
+
+  - authors: "**Capriotti, J.**, L.J. Heagy, D. Cowan, J. Kuttai, S. Kang, D. Fournier, T. Astic, R. Cockett, and D.W. Oldenburg"
+    year: 2023
+    title: "10 years of SimPEG: Recent developments and the next steps forward"
+    venue: "KEGS 2023"
+    note: ""
+
+  - authors: "**Capriotti, J.**, J. Kuttai, D. Fournier, and L.J. Heagy"
+    year: 2022
+    title: "Linking open-source tools for geophysical simulation and inversion in rugged topographies"
+    venue: "AGU Fall Meeting 2022"
+    note: ""
+
+  - authors: "Heagy, L.J., T. Astic, **J. Capriotti**, and D.W. Oldenburg"
+    year: 2021
+    title: "Carbon sequestration in ultramafic rocks and the role of geophysical inversions"
+    venue: "AGU Fall Meeting 2021"
+    note: ""
+
+  - authors: "**Capriotti, J.**, T. Astic, L.J. Heagy, and D.W. Oldenburg"
+    year: 2021
+    title: "Implementing an open-source framework for joint inversion"
+    venue: "AGU Fall Meeting 2021"
+    note: ""
+
+  - authors: "**Capriotti, J.**, L.J. Heagy, and J. Kuttai"
+    year: 2021
+    title: "Geophysical simulations and inversions with SimPEG"
+    venue: "Engineering and Mining Geophysics 2021"
+    pages: "1–2"
+    note: ""
+
+  - authors: "Kang, S., **J. Capriotti**, D.W. Oldenburg, L.J. Heagy, and D. Cowan"
+    year: 2020
+    title: "Open-source geophysical software development for groundwater applications"
+    venue: "SEG Technical Program Expanded Abstracts 2020"
+    pages: "1989–1993"
+    note: ""
+
+  - authors: "**Capriotti, J.**, and Y. Li"
+    year: 2019
+    title: "Joint equivalent source processing of gravity and gravity gradient data"
+    venue: "International Workshop on GEM Methods, Xi'an, China"
+    pages: "324–327"
+    note: ""
+
+  - authors: "**Capriotti, J.**, and Y. Li"
+    year: 2018
+    title: "Guided fuzzy c-means clustering inversion of electrical potential due to an anisotropic-layered half-space"
+    venue: "SEG Technical Program Expanded Abstracts 2018"
+    pages: "914–918"
+    note: ""
+
+  - authors: "**Capriotti, J.**, and Y. Li"
+    year: 2017
+    title: "Geomodelling with Minecraft: Geophysics meets video games"
+    venue: "Exploration 17: 6th Decennial International Conference on Mineral Exploration"
+    pages: "729–733"
+    note: ""
+
+  - authors: "**Capriotti, J.**, and Y. Li"
+    year: 2017
+    title: "Time-lapse gravity inversion for multiple reservoir parameters using fuzzy c-means clustering"
+    venue: "SEG Technical Program Expanded Abstracts 2017"
+    pages: "5865–5869"
+    note: ""
+
+  - authors: "**Capriotti, J.**, and Y. Li"
+    year: 2015
+    title: "Integrating gravity and gravity gradiometry data for joint inversion: A case study at the Kauring Test Site"
+    venue: "SEG Technical Program Expanded Abstracts 2015"
+    pages: "1505–1509"
+    note: ""
+
+  - authors: "**Capriotti, J.**, and Y. Li"
+    year: 2014
+    title: "Gravity and gravity gradient data: Understanding their information content through joint inversions"
+    venue: "SEG Technical Program Expanded Abstracts 2014"
+    pages: "1329–1333"
+    note: ""
+
+  - authors: "**Capriotti, J.**, and Y. Li"
+    year: 2013
+    title: "Aquifer storage monitoring at Leyden Mine using time-lapse gravity: A revisit seven years later"
+    venue: "SEG Technical Program Expanded Abstracts 2013"
+    pages: "1146–1150"
+    note: ""
+
+invited_presentations:
+  - title: "Fluid-flow coupled inversion of time-lapse gravity data for reservoir properties"
+    event: "Heiland Lecture"
+    institution: "CSM Dept. of Geophysics"
+    location: "Golden, Colorado"
+    year: 2018
+
+  - title: "The joint inversion of gravity and gravity gradient data"
+    event: "Special Lecture"
+    institution: "Chinese Academy of Geosciences"
+    location: "Beijing, China"
+    year: 2016
+
+  - title: "Inversion for permeability distribution from time-lapse gravity data"
+    event: "Best of D&P Forum"
+    institution: "SEG 84th Annual Meeting"
+    location: "Denver, Colorado"
+    year: 2014

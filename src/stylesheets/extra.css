@@ -1,0 +1,62 @@
+/* ── Home page hero ─────────────────────────────────────────────────────── */
+
+.hero-links {
+  margin: 1.5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* ── Explore cards (hover-reveal) ───────────────────────────────────────── */
+
+.explore-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.explore-card {
+  display: block;
+  background: var(--md-code-bg-color);
+  border-left: 4px solid var(--md-primary-fg-color);
+  border-radius: 0.25rem;
+  padding: 1.25rem 1.25rem 1rem;
+  text-decoration: none;
+  color: inherit;
+  min-height: 4rem;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.explore-card:hover {
+  background: var(--md-accent-fg-color--transparent);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  color: inherit;
+  text-decoration: none;
+}
+
+.explore-card__title {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.explore-card__desc {
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--md-default-fg-color--light);
+  line-height: 1.5;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.explore-card:hover .explore-card__desc {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Experience page: position headings ─────────────────────────────────── */
+
+.md-content h3 + p strong {
+  font-size: 0.9rem;
+}

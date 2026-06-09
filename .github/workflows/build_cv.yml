@@ -1,25 +1,36 @@
 name: Build CV
+
 on: [push]
+
 jobs:
-  build_latex:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Set up Git repository
-        uses: actions/checkout@v4
-        with:
-          submodules: true
-      - name: Compile LaTeX document
-        uses: xu-cheng/latex-action@v3
-        with:
-          latexmk_use_xelatex: true
-          working_directory: CV
-          root_file: |
-            cv.tex
-            coverletter.tex
-        env:
-          TEXINPUTS: ".:./Awesome-CV//:"
-      - name: Upload PDF file
-        uses: actions/upload-artifact@v4
-        with:
-          name: PDF
-          path: CV/*.pdf
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: Set up Python
+              uses: actions/setup-python@v5
+              with:
+                  python-version: "3.x"
+
+            - name: Install pyyaml
+              run: pip install pyyaml
+
+            - name: Generate publications
+              run: python scripts/generate_publications.py
+
+            - name: Install Typst
+              run: |
+                  TYPST_VERSION=$(curl -s https://api.github.com/repos/typst/typst/releases/latest | grep '"tag_name"' | cut -d'"' -f4)
+                  curl -sSL "https://github.com/typst/typst/releases/download/${TYPST_VERSION}/typst-x86_64-unknown-linux-musl.tar.xz" \
+                    | tar -xJ --strip-components=1 -C /usr/local/bin typst-x86_64-unknown-linux-musl/typst
+
+            - name: Compile CV
+              run: typst compile CV/cv.typ CV/cv.pdf
+
+            - name: Upload PDF artifact
+              uses: actions/upload-artifact@v4
+              with:
+                  name: CV
+                  path: CV/cv.pdf
