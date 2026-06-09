@@ -32,22 +32,6 @@
 #resume-item[
   Computational geophysicist and scientific software developer with 13+ years of experience in geophysical inversion, multi-physics simulation, and production software development across Python, C++, Rust, and FORTRAN. Core architect and former lead developer of SimPEG, a widely adopted open-source platform for geophysical simulation and inversion. Current research focuses on coupled fluid-flow and geophysical time-lapse modeling, Bayesian inversion via normalizing flows, and compressive sensing for survey design. Maintains a strong first-hand connection to geophysical data through years of field work and teaching applied geophysics courses covering survey design, data acquisition, and interpretation across gravity, electrical, magnetic, and electromagnetic methods. Proven track record of building HPC software, leading technical teams, and translating research into production-grade tools for industry consortia.
 ]
-
-// ─────────────────────────────────────────────────────────────────────────────
-= Technical Skills
-
-#resume-skill-item(
-  "Languages",
-  (strong("Python"), strong("C++"), strong("Rust"), "FORTRAN", "MATLAB", "Java"),
-)
-#resume-skill-item(
-  "Scientific Computing",
-  (strong("SimPEG"), "NumPy", "SciPy", "Dask", "MPI", "OpenMP", "Git/GitHub", "CI/CD"),
-)
-#resume-skill-item(
-  "Numerical Methods",
-  ("Finite volume PDE solvers", "Tikhonov regularization", "Joint inversion", "Equivalent source processing", "Time-lapse inversion", "Gauss-Newton & L-BFGS", "Fuzzy c-means clustering"),
-)
 //#block(below: 0.65em)
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -167,7 +151,23 @@
 ]
 
 // ─────────────────────────────────────────────────────────────────────────────
-= Publications
+= Technical Skills
+
+#resume-skill-item(
+  "Languages",
+  (strong("Python"), strong("C++"), strong("Rust"), "FORTRAN", "MATLAB", "Java"),
+)
+#resume-skill-item(
+  "Scientific Computing",
+  (strong("SimPEG"), "NumPy", "SciPy", "Dask", "MPI", "OpenMP", "Git/GitHub", "CI/CD"),
+)
+#resume-skill-item(
+  "Numerical Methods",
+  ("Finite volume PDE solvers", "Tikhonov regularization", "Joint inversion", "Equivalent source processing", "Time-lapse inversion", "Gauss-Newton & L-BFGS", "Fuzzy c-means clustering"),
+)
+
+// ─────────────────────────────────────────────────────────────────────────────
+= Publications & Presentations
 
 // Generated from data/publications.yaml — run scripts/generate_publications.py to update
 #include "publications.typ"
