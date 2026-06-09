@@ -54,6 +54,24 @@ jobs:
           curl -sSL "https://github.com/typst/typst/releases/download/${TYPST_VERSION}/typst-x86_64-unknown-linux-musl.tar.xz" \
             | tar -xJ --strip-components=1 -C /usr/local/bin typst-x86_64-unknown-linux-musl/typst
 
+      - name: Install fonts
+        run: |
+          sudo apt-get install -y fonts-roboto
+          curl -sSL "https://github.com/adobe-fonts/source-sans/releases/latest/download/OTF-source-sans-3.zip" \
+            -o /tmp/source-sans.zip
+          unzip -q /tmp/source-sans.zip -d /tmp/source-sans
+          sudo mkdir -p /usr/local/share/fonts/source-sans
+          find /tmp/source-sans -name "*.otf" | xargs -I{} sudo cp {} /usr/local/share/fonts/source-sans/
+          sudo fc-cache -f
+
+      - name: Cache Typst packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/typst/packages
+          key: typst-packages-${{ hashFiles('CV/cv.typ') }}
+          restore-keys: |
+            typst-packages-
+
       - name: Compile CV
         run: typst compile CV/cv.typ CV/cv.pdf --font-path=CV/fonts
 
