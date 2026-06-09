@@ -9,6 +9,7 @@
     phone:      "(815) 370-3693",
     github:     "jcapriot",
     linkedin:   "jcapriot",
+    orcid:      "0000-0003-4762-5377",
     address:    "Arvada, Colorado",
     positions:  (
       "Computational Geophysicist",

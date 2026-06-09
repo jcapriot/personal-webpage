@@ -14,6 +14,7 @@ Based in Golden, Colorado. Research Associate and Adjunct Professor at the Color
 
 <div class="hero-links" markdown>
 [:fontawesome-brands-github: GitHub](https://github.com/jcapriot){ .md-button }
+[:fontawesome-brands-orcid: ORCiD](https://orcid.org/0000-0003-4762-5377){ .md-button }
 [:fontawesome-brands-linkedin: LinkedIn](https://linkedin.com/in/jcapriot){ .md-button }
 [:fontawesome-regular-envelope: Email](mailto:josephrcapriotti@gmail.com){ .md-button }
 [:fontawesome-regular-file-pdf: Download CV](cv.pdf){ .md-button }
