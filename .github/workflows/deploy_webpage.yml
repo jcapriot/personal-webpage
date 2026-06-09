@@ -55,7 +55,7 @@ jobs:
             | tar -xJ --strip-components=1 -C /usr/local/bin typst-x86_64-unknown-linux-musl/typst
 
       - name: Compile CV
-        run: typst compile CV/cv.typ CV/cv.pdf
+        run: typst compile CV/cv.typ CV/cv.pdf --font-path=CV/fonts
 
       - name: Copy CV to site
         run: cp CV/cv.pdf site/cv.pdf
