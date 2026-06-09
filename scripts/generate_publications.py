@@ -15,11 +15,11 @@ MD_OUT = ROOT / "src" / "publications.md"
 
 
 def md_bold_to_typst(text: str) -> str:
-    return re.sub(r"\*\*(.+?)\*\*", r"*[\1]*", text)
+    return re.sub(r"\*\*(.+?)\*\*", r"*\1*", text)
 
 
 def doi_link_md(doi: str) -> str:
-    return f" [[DOI](https://doi.org/{doi})]" if doi else ""
+    return f" [[DOI: {doi}](https://doi.org/{doi})]" if doi else ""
 
 
 def doi_link_typst(doi: str) -> str:

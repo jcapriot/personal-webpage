@@ -36,7 +36,7 @@ A finite volume library providing structured and unstructured mesh types for sol
 
 ### CGEMaestro
 
-[CGEMaestro](cgem.mines.edu) is a geophysical software application developed by the Center for Geophysics, Energy, and Minerals (formerly the Center for Gravity, Electrical and Magnetic Studies) for the members of the GeoMultiphyiscs Research Consortium (GMRC) at the Colorado School of Mines. Developed primarily in fortran, it contains forward modeling, processing, and inversion codes adapted for industry use from research projects for many potential fields related systems.
+[CGEMaestro](https://cgem.mines.edu/) is a geophysical software application developed by the Center for Geophysics, Energy, and Minerals (formerly the Center for Gravity, Electrical and Magnetic Studies) for the members of the GeoMultiphyiscs Research Consortium (GMRC) at the Colorado School of Mines. Developed primarily in fortran, it contains forward modeling, processing, and inversion codes adapted for industry use from research projects for many potential fields related systems.
 
 **Key contributions:**
 
