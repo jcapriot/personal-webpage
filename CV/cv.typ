@@ -9,7 +9,7 @@
     phone:      "(815) 370-3693",
     github:     "jcapriot",
     linkedin:   "jcapriot",
-    address:    "9295 W 80th Pl Apt B, Arvada, Colorado 80005",
+    address:    "Arvada, Colorado",
     positions:  (
       "Computational Geophysicist",
       "Scientific Software Developer",
