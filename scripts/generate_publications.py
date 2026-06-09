@@ -4,7 +4,6 @@ Generate CV/publications.typ and src/publications.md from data/publications.yaml
 Run this script before building the CV or the website.
 """
 import re
-import textwrap
 from pathlib import Path
 
 import yaml
@@ -16,13 +15,15 @@ MD_OUT = ROOT / "src" / "publications.md"
 
 
 def md_bold_to_typst(text: str) -> str:
-    """Convert Markdown **bold** to Typst *bold*."""
     return re.sub(r"\*\*(.+?)\*\*", r"*[\1]*", text)
 
 
-def md_italic_to_typst(text: str) -> str:
-    """Convert Markdown _italic_ to Typst _italic_ (already same syntax)."""
-    return text
+def doi_link_md(doi: str) -> str:
+    return f" [[DOI](https://doi.org/{doi})]" if doi else ""
+
+
+def doi_link_typst(doi: str) -> str:
+    return f' #link("https://doi.org/{doi}")[DOI]' if doi else ""
 
 
 def format_peer_reviewed_md(entry: dict) -> str:
@@ -33,6 +34,7 @@ def format_peer_reviewed_md(entry: dict) -> str:
     volume = entry.get("volume", "")
     pages = entry.get("pages", "")
     note = entry.get("note", "")
+    doi = entry.get("doi", "")
 
     vol_pages = ""
     if volume and pages:
@@ -45,6 +47,7 @@ def format_peer_reviewed_md(entry: dict) -> str:
     line = f"{authors}, {year}, {title}. _{journal}_{vol_pages}."
     if note:
         line += f" — *{note}*"
+    line += doi_link_md(doi)
     return line
 
 
@@ -56,6 +59,7 @@ def format_peer_reviewed_typst(entry: dict) -> str:
     volume = entry.get("volume", "")
     pages = entry.get("pages", "")
     note = entry.get("note", "")
+    # doi = entry.get("doi", "")
 
     vol_pages = ""
     if volume and pages:
@@ -68,6 +72,7 @@ def format_peer_reviewed_typst(entry: dict) -> str:
     line = f"{authors}, {year}, {title}. _{journal}_{vol_pages}."
     if note:
         line += f" — _{note}_"
+    # line += doi_link_typst(doi)
     return line
 
 
@@ -78,6 +83,7 @@ def format_conference_md(entry: dict) -> str:
     venue = entry.get("venue", "")
     pages = entry.get("pages", "")
     note = entry.get("note", "")
+    doi = entry.get("doi", "")
 
     line = f"{authors}, {year}, {title}. _{venue}_"
     if pages:
@@ -85,6 +91,7 @@ def format_conference_md(entry: dict) -> str:
     line += "."
     if note:
         line += f" {note}"
+    line += doi_link_md(doi)
     return line
 
 
@@ -95,6 +102,7 @@ def format_conference_typst(entry: dict) -> str:
     venue = entry.get("venue", "")
     pages = entry.get("pages", "")
     note = entry.get("note", "")
+    # doi = entry.get("doi", "")
 
     line = f"{authors}, {year}, {title}. _{venue}_"
     if pages:
@@ -102,6 +110,7 @@ def format_conference_typst(entry: dict) -> str:
     line += "."
     if note:
         line += f" {note}"
+    # line += doi_link_typst(doi)
     return line
 
 

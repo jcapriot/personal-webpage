@@ -2,11 +2,9 @@
 
 Um, E., D. Alumbaugh, *[J. Capriotti]*, J. Weis, E. Nichols, and K. Osato, 2024, 3D modeling of deep borehole electromagnetic measurements with energized casing source for fracture mapping at the Utah FORGE geothermal site. _Geophysical Prospecting_, 72, 2779–2797.
 
-Heagy, L.J., S. Kang, *[J. Capriotti]*, D. Cowan, D. Fournier, and D.W. Oldenburg, 2024, Opportunities for open-source software to accelerate research in applied geophysics. _The Leading Edge_, 43(2), 91–99.
+Heagy, L.J., S. Kang, *[J. Capriotti]*, D. Cowan, D. Fournier, and D.W. Oldenburg, 2024, Opportunities for open-source software to accelerate research in applied geophysics. _The Leading Edge_, 43(2), 84–94.
 
 *[Capriotti, J.]*, and Y. Li, 2022, Joint inversion of gravity and gravity gradient data: A systematic evaluation. _Geophysics_, 87(2), G29–G44.
-
-Li, Y., R. Krahenbuhl, and *[J. Capriotti]*, 2019, Time-lapse gravity: A versatile method for monitoring dynamic processes. _Acta Geologica Sinica (English Edition)_, 93(S1), 36–37.
 
 *[Capriotti, J.]*, and Y. Li, 2015, Inversion for permeability distribution from time-lapse gravity data. _Geophysics_, 80, WA69–WA83. — _Honorable Mention, Best Paper in Geophysics, 2015_
 
@@ -18,11 +16,11 @@ Li, Y., R. Krahenbuhl, and *[J. Capriotti]*, 2019, Time-lapse gravity: A versati
 
 == Selected Conference Papers & Expanded Abstracts
 
-*[Capriotti, J.]*, N. Perkovich, M. Zhang, and Y. Li, 2025, Geophysical responses of stimulated hydrogen production in ultramafic rocks. _SEG International Exposition and Annual Meeting_. SEG-2025-4316820
+*[Capriotti, J.]*, N. Perkovich, M. Zhang, and Y. Li, 2025, Geophysical responses of stimulated hydrogen production in ultramafic rocks. _SEG/AAPG International Meeting for Applied Geoscience & Energy_. SEG-2025-4316820
 
 Soler, S., *[J. Capriotti]*, D. Oldenburg, and L. Heagy, 2025, 3D geophysical inversions to characterize carbon sequestration potential of ultramafic rocks. _EGU General Assembly_. EGU25-13551
 
-*[Capriotti, J.]*, L.J. Heagy, and S.R. Soler, 2023, Joint inversions with the SimPEG framework. _AGU Fall Meeting 2023_.
+*[Capriotti, J.]*, L.J. Heagy, and S.R. Soler, 2023, Joint inversions with the SimPEG framework. _SEG/AAPG International Meeting for Applied Geoscience & Energy_, pp. 1678-1682.
 
 *[Capriotti, J.]*, L.J. Heagy, D. Cowan, J. Kuttai, S. Kang, D. Fournier, T. Astic, R. Cockett, and D.W. Oldenburg, 2023, 10 years of SimPEG: Recent developments and the next steps forward. _KEGS 2023_.
 
@@ -35,6 +33,8 @@ Heagy, L.J., T. Astic, *[J. Capriotti]*, and D.W. Oldenburg, 2021, Carbon seques
 *[Capriotti, J.]*, L.J. Heagy, and J. Kuttai, 2021, Geophysical simulations and inversions with SimPEG. _Engineering and Mining Geophysics 2021_, pp. 1–2.
 
 Kang, S., *[J. Capriotti]*, D.W. Oldenburg, L.J. Heagy, and D. Cowan, 2020, Open-source geophysical software development for groundwater applications. _SEG Technical Program Expanded Abstracts 2020_, pp. 1989–1993.
+
+*[Capriotti, J.]*, and Y. Li, 2019, Equivalent source processing of vector gravity data. _SEG Technical Program Expanded Abstracts 2019_.
 
 *[Capriotti, J.]*, and Y. Li, 2019, Joint equivalent source processing of gravity and gravity gradient data. _International Workshop on GEM Methods, Xi'an, China_, pp. 324–327.
 
