@@ -9,10 +9,11 @@
 - Continued as SimPEG administrator, reviewing pull requests, assisting in release deployment, and guiding a new inversion framework.
 - Applied conditional normalizing flows for Bayesian posterior inference in magnetotelluric inversion, enabling full uncertainty quantification without traditional MCMC sampling.
 - Extended the Ergodic Sampling compressive sensing methodology to an N-dimensional generalization; significantly accelerated the experimental design algorithm.
+- Developed a fast level-set inversion approach using linear time distance transforms and the adam minimizer.
 - Applied 3D borehole EM simulation (energized casing source) to image stimulated fracture zones at the Utah Frontier Observatory for Research in Geothermal Energy (FORGE).
-- Developed a multi-physics time-lapse simulation framework coupling fluid-flow equations to changes in physical state (density, magnetic susceptibility, electrical conductivity) and the resulting gravity, magnetic, and electrical geophysical responses, applied to monitoring geologic hydrogen production.
-- Maintain and modernize the consortium's distributed FORTRAN HPC code base: refactoring legacy routines, integrating optimized BLAS/LAPACK calls, and managing software distribution across member institutions.
-- Developing production-grade geophysical modeling codes in C++ and Rust for consortium-wide deployment.
+- Developed a multi-physics time-lapse simulation framework for monitoring geologic hydrogen production coupling fluid and energy flow equations to changes in physical state (density, magnetic susceptibility, electrical conductivity) and the resulting gravity, magnetic, and electrical geophysical responses.
+- Maintained and modernized the consortium's distributed FORTRAN HPC code base: refactoring legacy routines, integrating optimized BLAS/LAPACK calls, and managing software distribution across member institutions.
+- Developed production-grade geophysical modeling codes in C++ and Rust for consortium-wide deployment.
 
 ---
 
@@ -21,7 +22,7 @@
 *Aug 2023 – Present · Golden, Colorado*
 
 - *GPGN 318/319: Applied Geophysics 1 & 2* — Taught survey design, data acquisition, processing, and interpretation across positioning, gravity, electrical, magnetic, and electromagnetic methods using field instrumentation.
-- *GPGN 309: Physics of the Earth 2* — Taught foundational physics of time-varying fields: electromagnetic theory and elastic wave propagation and their interactions with earth materials.
+- *GPGN 329: Physics of the Earth 2* — Taught foundational physics of time-varying fields: electromagnetic theory and elastic wave propagation and their interactions with earth materials.
 - *Summer Field Camp (invited instructor)* — Guided students in field collection of electrical and electromagnetic data.
 
 ---

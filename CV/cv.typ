@@ -35,6 +35,22 @@
 ]
 //#block(below: 0.65em)
 
+
+// ─────────────────────────────────────────────────────────────────────────────
+= Technical Skills
+
+#resume-skill-item(
+  "Languages",
+  (strong("Python"), strong("C++"), strong("Rust"), "FORTRAN", "MATLAB", "Java"),
+)
+#resume-skill-item(
+  "Scientific Computing",
+  (strong("SimPEG"), "NumPy", "SciPy", "Dask", "MPI", "OpenMP", "Git/GitHub", "CI/CD"),
+)
+#resume-skill-item(
+  "Numerical Methods",
+  ("Finite volume PDE solvers", "Tikhonov regularization", "Joint inversion", "Equivalent source processing", "Time-lapse inversion", "Gauss-Newton & L-BFGS", "Fuzzy c-means clustering"),
+)
 // ─────────────────────────────────────────────────────────────────────────────
 = Experience
 
@@ -48,10 +64,11 @@
   - Continued as SimPEG administrator, reviewing pull requests, assisting in release deployment, and guiding a new inversion framework.
   - Applied conditional normalizing flows for Bayesian posterior inference in magnetotelluric inversion, enabling full uncertainty quantification without traditional MCMC sampling.
   - Extended the Ergodic Sampling compressive sensing methodology to an N-dimensional generalization; significantly accelerated the experimental design algorithm.
+  - Developed a fast level-set inversion approach using linear time distance transforms and the adam minimizer.
   - Applied 3D borehole EM simulation (energized casing source) to image stimulated fracture zones at the Utah Frontier Observatory for Research in Geothermal Energy (FORGE).
-  - Developed a multi-physics time-lapse simulation framework coupling fluid-flow equations to changes in physical state (density, magnetic susceptibility, electrical conductivity) and the resulting gravity, magnetic, and electrical geophysical responses, applied to monitoring geologic hydrogen production.
-  - Maintain and modernize the consortium's distributed FORTRAN HPC code base: refactoring legacy routines, integrating optimized BLAS/LAPACK calls, and managing software distribution across member institutions.
-  - Developing production-grade geophysical modeling codes in C++ and Rust for consortium-wide deployment.
+  - Developed a multi-physics time-lapse simulation framework for monitoring geologic hydrogen production coupling fluid and energy flow equations to changes in physical state (density, magnetic susceptibility, electrical conductivity) and the resulting gravity, magnetic, and electrical geophysical responses.
+  - Maintained and modernized the consortium's distributed FORTRAN HPC code base: refactoring legacy routines, integrating optimized BLAS/LAPACK calls, and managing software distribution across member institutions.
+  - Developed production-grade geophysical modeling codes in C++ and Rust for consortium-wide deployment.
 ]
 
 #resume-entry(
@@ -152,24 +169,7 @@
 ]
 
 // ─────────────────────────────────────────────────────────────────────────────
-= Technical Skills
-
-#resume-skill-item(
-  "Languages",
-  (strong("Python"), strong("C++"), strong("Rust"), "FORTRAN", "MATLAB", "Java"),
-)
-#resume-skill-item(
-  "Scientific Computing",
-  (strong("SimPEG"), "NumPy", "SciPy", "Dask", "MPI", "OpenMP", "Git/GitHub", "CI/CD"),
-)
-#resume-skill-item(
-  "Numerical Methods",
-  ("Finite volume PDE solvers", "Tikhonov regularization", "Joint inversion", "Equivalent source processing", "Time-lapse inversion", "Gauss-Newton & L-BFGS", "Fuzzy c-means clustering"),
-)
-
-// ─────────────────────────────────────────────────────────────────────────────
 = Publications & Presentations
-
 // Generated from data/publications.yaml — run scripts/generate_publications.py to update
 #include "publications.typ"
 
