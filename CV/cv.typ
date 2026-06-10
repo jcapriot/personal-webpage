@@ -1,5 +1,7 @@
 #import "@preview/modern-cv:0.10.0": *
 
+#let dark_teal = rgb("#007367")
+
 #show: resume.with(
   author: (
     firstname:  "Joseph R.",
@@ -24,6 +26,7 @@
   colored-headers: true,
   show-footer:     false,
   paper-size:      "us-letter",
+  accent-color: dark_teal,
   //contact-items-separator: box[#h(2pt)#text("|")#h(2pt)],
 )
 
