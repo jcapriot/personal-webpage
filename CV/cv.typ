@@ -48,7 +48,7 @@
 )
 #resume-skill-item(
   "Scientific Computing",
-  (strong("SimPEG"), "NumPy", "SciPy", "Dask", "MPI", "OpenMP", "Git/GitHub", "CI/CD"),
+  (strong("SimPEG"), "NumPy", "SciPy", "Dask", "PyTorch", "MPI", "OpenMP", "Git/GitHub", "CI/CD"),
 )
 #resume-skill-item(
   "Numerical Methods",
