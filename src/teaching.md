@@ -18,11 +18,11 @@ Continuation covering electromagnetic methods (time-domain and frequency-domain 
 
 ---
 
-### GPGN 329 — Geophysical Inversion
+### GPGN 329 — Physics of the Earth 2
 
 [:fontawesome-brands-github: jcapriot/GPGN-329](https://github.com/jcapriot/GPGN-329){ .md-button }
 
-Foundations of geophysical inversion: Tikhonov regularization, singular value decomposition, conjugate gradient methods, and Gauss-Newton optimization. Jupyter-based assignments using SimPEG.
+Foundational physics of time-varying fields: electromagnetic theory and elastic wave propagation and their interactions with earth materials. Jupyter-based assignments using SimPEG.
 
 ---
 

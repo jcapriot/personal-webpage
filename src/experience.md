@@ -33,7 +33,7 @@
 
 **SimPEG Director of Operations**
 
-- Lead architecture, development, and maintenance of the open-source SimPEG Python framework for simulating and inverting geophysical data across potential field, resistivity, IP, and electromagnetic methods.
+- Led architecture, development, and maintenance of the open-source SimPEG Python framework for simulating and inverting geophysical data across potential field, resistivity, IP, and electromagnetic methods.
 - Designed scalable parallel inversion infrastructure using Dask and MPI, enabling SimPEG workflows to run on large HPC clusters.
 - Implemented tetrahedral mesh support and improved quadtree/octree generation in the *discretize* finite volume library; added full boundary-condition capabilities for geophysical PDE systems.
 - Integrated multiple joint inversion methodologies (cooperative, petrophysically constrained, joint total-variation).

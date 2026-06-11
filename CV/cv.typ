@@ -67,7 +67,7 @@
   - Continued as SimPEG administrator, reviewing pull requests, assisting in release deployment, and guiding a new inversion framework.
   - Applied conditional normalizing flows for Bayesian posterior inference in magnetotelluric inversion, enabling full uncertainty quantification without traditional MCMC sampling.
   - Extended the Ergodic Sampling compressive sensing methodology to an N-dimensional generalization; significantly accelerated the experimental design algorithm.
-  - Developed a fast level-set inversion approach using linear time distance transforms and the adam minimizer.
+  - Developed a fast level-set inversion approach using linear time distance transforms and the Adam minimizer.
   - Applied 3D borehole EM simulation (energized casing source) to image stimulated fracture zones at the Utah Frontier Observatory for Research in Geothermal Energy (FORGE).
   - Developed a multi-physics time-lapse simulation framework for monitoring geologic hydrogen production coupling fluid and energy flow equations to changes in physical state (density, magnetic susceptibility, electrical conductivity) and the resulting gravity, magnetic, and electrical geophysical responses.
   - Maintained and modernized the consortium's distributed FORTRAN HPC code base: refactoring legacy routines, integrating optimized BLAS/LAPACK calls, and managing software distribution across member institutions.
@@ -94,7 +94,7 @@
 )
 #resume-item[
   *SimPEG Director of Operations*
-  - Lead architecture, development, and maintenance of the open-source SimPEG Python framework for simulating and inverting geophysical data across potential field, resistivity, IP, and electromagnetic methods.
+  - Led architecture, development, and maintenance of the open-source SimPEG Python framework for simulating and inverting geophysical data across potential field, resistivity, IP, and electromagnetic methods.
   - Designed scalable parallel inversion infrastructure using Dask and MPI, enabling SimPEG workflows to run on large HPC clusters.
   - Implemented tetrahedral mesh support and improved quadtree/octree generation in the _discretize_ finite volume library; added full boundary-condition capabilities for geophysical PDE systems.
   - Integrated multiple joint inversion methodologies (cooperative, petrophysically constrained, joint total-variation).

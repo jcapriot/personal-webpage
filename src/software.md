@@ -36,11 +36,11 @@ A finite volume library providing structured and unstructured mesh types for sol
 
 ### CGEMaestro
 
-[CGEMaestro](https://cgem.mines.edu/) is a geophysical software application developed by the Center for Geophysics, Energy, and Minerals (formerly the Center for Gravity, Electrical and Magnetic Studies) for the members of the GeoMultiphyiscs Research Consortium (GMRC) at the Colorado School of Mines. Developed primarily in fortran, it contains forward modeling, processing, and inversion codes adapted for industry use from research projects for many potential fields related systems.
+[CGEMaestro](https://cgem.mines.edu/) is a geophysical software application developed by the Center for Geophysics, Energy, and Minerals (formerly the Center for Gravity, Electrical and Magnetic Studies) for the members of the GeoMultiphysics Research Consortium (GMRC) at the Colorado School of Mines. Developed primarily in fortran, it contains forward modeling, processing, and inversion codes adapted for industry use from research projects for many potential fields related systems.
 
 **Key contributions:**
 
-- Implementented openmp parallelism throughout codebase
+- Implemented OpenMP parallelism throughout codebase
 - Modernized legacy FORTRAN code
 - Migrated to version controlled system
 - Adapted many research projects into industry strength executables
@@ -52,7 +52,7 @@ A finite volume library providing structured and unstructured mesh types for sol
 
 [:fontawesome-brands-github: jcapriot/wavelets-rs](https://github.com/jcapriot/wavelets-rs){ .md-button }
 
-A fast multithreaded and SIMD excelerated rust library for both lifted and filtered wavelet transforms, with Python bindings. Provides forward and inverse transforms along with adjoint versions suitable for minimization algorithms.
+A fast multithreaded and SIMD-accelerated Rust library for both lifted and filtered wavelet transforms, with Python bindings. Provides forward and inverse transforms along with adjoint versions suitable for minimization algorithms.
 
 ---
 
