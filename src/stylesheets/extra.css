@@ -1,5 +1,21 @@
 /* ── Home page hero ─────────────────────────────────────────────────────── */
 
+.hero-headshot {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0 1.25rem;
+}
+
+.hero-headshot img {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 3px solid var(--md-primary-fg-color);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
 .hero-links {
   margin: 1.5rem 0;
   display: flex;
@@ -57,6 +73,6 @@
 
 /* ── Experience page: position headings ─────────────────────────────────── */
 
-.md-content h3 + p strong {
+.md-content h3+p strong {
   font-size: 0.9rem;
 }

@@ -4,6 +4,10 @@ hide:
   - toc
 ---
 
+<div class="hero-headshot">
+  <img src="img/headshot.jpg" alt="Joseph Capriotti">
+</div>
+
 # Computational Geophysicist · Scientific Software Developer
 
 ---
