@@ -12,7 +12,7 @@ hide:
 
 ---
 
-Computational geophysicist and scientific software developer with 13+ years of experience in geophysical inversion, multi-physics simulation, and production software development. Core architect and former lead developer of [SimPEG](https://simpeg.xyz), a widely adopted open-source platform for geophysical simulation and inversion. Current work spans coupled fluid-flow and geophysical time-lapse modeling, Bayesian inversion via normalizing flows, level-set inversions, and compressive sensing for survey design.
+Computational geophysicist and scientific software developer with 13+ years of experience in geophysical inversion, multi-physics simulation, and production software development. Core architect an lead developer of [SimPEG](https://simpeg.xyz), a widely adopted open-source platform for geophysical simulation and inversion. Current work spans coupled fluid-flow and geophysical time-lapse modeling, Bayesian inversion via normalizing flows, level-set inversions, and compressive sensing for survey design.
 
 Based in Golden, Colorado. Research Associate and Adjunct Professor at the Colorado School of Mines.
 
