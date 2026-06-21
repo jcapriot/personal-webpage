@@ -76,6 +76,8 @@ Beyond the projects above, I have contributed to the broader scientific open-sou
 | [pyvista](https://github.com/pyvista/pyvista) | 3D visualization and mesh analysis for science and engineering |
 | [aurora](https://github.com/simpeg/aurora) |  Open Source MT processing library |
 | [mt_metadata](https://github.com/kujaku11/mt_metadata) |  Standard MT metadata |
-| [python-mumps](https://github.com/pyvista/pyvista) | Python bindings for the MUMPS: a parallel sparse direct solver. |
-| [highway](https://github.com/google/highway) |  C++ library that provides portable SIMD/vector intrinsics. |
+| [python-mumps](https://gitlab.kwant-project.org/kwant/python-mumps) | Python bindings for the MUMPS: a parallel sparse direct solver|
+| [highway](https://github.com/google/highway) |  C++ library that provides portable SIMD/vector intrinsics|
 | [pydata-sphinx-theme](https://github.com/pydata/pydata-sphinx-theme) |  A clean, three-column, Bootstrap-based Sphinx theme by and for the PyData community|
+| [pulp](https://github.com/sarah-quinones/pulp) |  A `rust` crate for safe abstraction over SIMD instructions|
+| [chumsky](https://codeberg.org/zesterer/chumsky) |  A combinator parser library for `rust`|
